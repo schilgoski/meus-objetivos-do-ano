@@ -28,24 +28,23 @@ body {
 .titulo-principal span {
     color: var(--verde);
     }
-.botao { font-family: «Crakra Petch», sans-serif;
-    background-color: var(--botao-inativo);
-    color: var(--branco); display: flex;
-    justify-content: center;
-    padding: 1em;
-    font-size: 18px;
-    align-items: center;
-    width: 100%;
-    border-bottom: 4px solid var(--botao-ativo);
-    border-left: 2px solid var(--botao-ativo);
-    border-right: 2px solid var(--botao-ativo);
-    border-top: none;
+    .botao { font-family: «Crakra Petch», sans-serif;
+        background-color: var(--botao-inativo);
+        color: var(--branco); 
+        display: flex;
+        justify-content: center;
+        padding: 1em;
+        font-size: 18px;
+        align-items: center;
+        width: 100%;
+        border-bottom: 4px solid var(--botao-ativo);
+        border-left: 2px solid var(--botao-ativo);
+        border-right: 2px solid var(--botao-ativo);
+        border-top: none;
     }
     .botoes { display: block;
     }
-    @media screen and (min-width: 768px) { .botoes { display: flex;
-    }
-    }
+    
     .botao:first-child { border-radius: 40px 0 0 0;
     }
     .botao:last-child { border-radius: 0 40px 0 0;
@@ -54,33 +53,53 @@ body {
         background-color: var(--botao-ativo);
         border-bottom: 4px solid var(--verde);
         }
-        .contador {
-            text-align: center;
+    
+    .abas-textos{
+            background-color: var(--texto-fundo);
+            padding: 40px;
+            border-radius: 0 0 40px 40px;
+    }
+    .botoes{
+        display: block;
+    }
+    .aba-conteudo.ativo{
+        display: block;
+    }
+    .aba-conteudo{
+        display: none;
+    }
+    .aba-conteudo-titulo-principal{
+        font-size: 28px;
+        text-align: center;
+    }
+    .aba-conteudo-titulo-secundario{
+        text-align: center;
+        color: var(--verde);
+        text-transform: uppercase;
+    }
+    .botoes { display: flex;}
+    
+    .contador{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .contador-digito{
+        padding: 0 16px;
+        text-align: center;
+        min-width: 100px;
+      }
+      .contador-digito-numero{
+        font-size: 50px;
+        margin: 0;
+      }
+      .contador-digito-texto{
+        color: var(--verde);
+        font-size: 40px;
+        margin: 0;
+      }
+      @media screen and (min-width:768) {
+        .botoes {
+            display: flex
         }
-        
-    #timer {
-        font-size: 60px;
-        }
-        
-    .tempo {
-        display: inline-block;
-        margin: 0 20px;
-        }
-        
-    .numero {
-        color: white; /* Cor dos números */
-        font-size: 120px; /* Tamanho da fonte para os números */
-        margin: 0 20px; /* Espaçamento à esquerda e à direita dos números */
-        }
-        
-    .palavra {
-        color: green; /* Cor das palavras */
-        font-size: 30px; /* Tamanho da fonte para as palavras */
-        }
-    .contador h2 {
-        color: #6FFF57; /* Cor do título "Tempo Para Completar Objetivo" */
-        margin-bottom: 20px; /* Adiciona espaço abaixo do h2 */
-        }
-    .contador h3 {
-        margin-top: 50px; /* Adiciona espaço acima do h3 */
-}
+      }
